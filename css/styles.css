@@ -1,0 +1,92 @@
+.imagen-contenedor {
+  background: url("../assets/background.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 90.3%;
+}
+.imagen-contenedor::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.322);
+}
+.contenedor-maestro {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  z-index: 1;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+.contenedor-d,
+.contenedor-i {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.titulo {
+  gap: 10px;
+}
+.text {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column !important;
+}
+
+.intermedio {
+  width: 1.3px;
+  height: 100%;
+  background: #000000;
+  background: linear-gradient(
+    180deg,
+    #020024 0%,
+    #0d31ff 30%,
+    #ffffff 50%,
+    #0d31ff 70%,
+    #000000 100%
+  );
+}
+.padre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hijo {
+  padding: 5px 0px;
+  font-size: 16px;
+  /* width: fit-content; */
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+}
+
+.hijo::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #b47dcd, #e878a2, #eb85ab);
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in;
+}
+.hijo:hover::before {
+  transform: scaleX(1);
+}
